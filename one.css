@@ -1,0 +1,494 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Syne',sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+section{
+    padding:100px 0;
+}
+
+.container{
+    max-width:1200px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:rgba(0,0,0,.6);
+    backdrop-filter:blur(10px);
+    padding:18px 0;
+    transition:.4s;
+}
+
+.navbar.scrolled{
+    padding:12px 0;
+    background:#000;
+}
+
+.navbar-brand{
+    color:#ffb703 !important;
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.navbar-toggler{
+    border:none;
+    background:#ffb703;
+    padding:8px 10px;
+}
+
+.navbar-toggler i{
+    color:#000;
+    font-size:28px;
+}
+
+.navbar-toggler:focus{
+    box-shadow:none;
+}
+
+.nav-link{
+    color:#fff !important;
+    margin-left:20px;
+    position:relative;
+    transition:.3s;
+    width:max-content;
+}
+
+.nav-link::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#ffb703;
+    transition:.4s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after{
+    width:100%;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    padding-top:120px;
+}
+
+.circle{
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#ffb703;
+    border-radius:50%;
+    filter:blur(150px);
+    opacity:.15;
+    top:-100px;
+    right:-100px;
+}
+
+.hero-text h1{
+    font-size:85px;
+    font-weight:700;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-text span{
+    color:#ffb703;
+}
+
+.hero-text p{
+    color:#aaa;
+    line-height:1.8;
+    margin-bottom:35px;
+    max-width:550px;
+    font-size:18px;
+}
+
+.hero-btn{
+    padding:15px 40px;
+    background:#ffb703;
+    color:#000;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    display:inline-block;
+    transition:.4s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 30px rgba(255,183,3,.4);
+}
+
+.coffee-img{
+    width:100%;
+    max-width:520px;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ================= TITLE ================= */
+
+.title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.title h2{
+    font-size:55px;
+    font-weight:700;
+}
+
+.title p{
+    color:#999;
+    margin-top:10px;
+    font-size:17px;
+}
+
+/* ================= SPECIAL ================= */
+
+.special-card{
+    background:#121212;
+    border-radius:30px;
+    overflow:hidden;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.08);
+    height:100%;
+}
+
+.special-card:hover{
+    transform:translateY(-10px);
+    border-color:#ffb703;
+}
+
+.special-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.special-card:hover img{
+    transform:scale(1.08);
+}
+
+.special-content{
+    padding:25px;
+}
+
+.special-content h4{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.special-content p{
+    color:#999;
+}
+
+.price{
+    color:#ffb703;
+    font-size:24px;
+    font-weight:700;
+}
+
+/* ================= BANNER ================= */
+
+.banner{
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    border-radius:40px;
+    padding:100px 50px;
+    text-align:center;
+}
+
+.banner h2{
+    font-size:60px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.banner p{
+    color:#ddd;
+    margin-bottom:30px;
+    max-width:700px;
+    margin-inline:auto;
+}
+
+/* ================= MENU ================= */
+
+.menu-box{
+    background:#121212;
+    border-radius:25px;
+    padding:25px;
+    transition:.4s;
+    border:1px solid transparent;
+    height:100%;
+}
+
+.menu-box:hover{
+    transform:translateX(10px);
+    border-color:#ffb703;
+}
+
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+    gap:20px;
+}
+
+.menu-item h5{
+    font-size:22px;
+    margin:0;
+}
+
+.menu-item span{
+    color:#ffb703;
+    font-weight:700;
+}
+
+.menu-box p{
+    color:#999;
+    margin:0;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.experience-card{
+    background:#121212;
+    padding:40px 25px;
+    border-radius:30px;
+    text-align:center;
+    transition:.4s;
+    height:100%;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.experience-card:hover{
+    transform:translateY(-10px);
+    border-color:#ffb703;
+}
+
+.experience-card i{
+    font-size:60px;
+    color:#ffb703;
+    margin-bottom:20px;
+}
+
+.experience-card h4{
+    margin-bottom:15px;
+}
+
+.experience-card p{
+    color:#999;
+    line-height:1.8;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+    background:#121212;
+    padding:60px;
+    border-radius:35px;
+}
+
+.form-control{
+    background:#1b1b1b;
+    border:none;
+    color:#fff;
+    padding:15px;
+    border-radius:15px;
+}
+
+.form-control::placeholder{
+    color:#777;
+}
+
+.form-control:focus{
+    box-shadow:none;
+    background:#1b1b1b;
+    color:#fff;
+}
+
+.contact-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:#ffb703;
+    font-weight:700;
+    transition:.4s;
+}
+
+.contact-btn:hover{
+    transform:scale(1.03);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:30px 15px;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+.social a{
+    color:#fff;
+    font-size:25px;
+    margin:0 10px;
+    transition:.3s;
+}
+
+.social a:hover{
+    color:#ffb703;
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:991px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .hero{
+        text-align:center;
+        padding-top:140px;
+    }
+
+    .hero-text{
+        margin-inline:auto;
+    }
+
+    .hero-text p{
+        margin-inline:auto;
+    }
+
+    .hero-text h1{
+        font-size:60px;
+    }
+
+    .coffee-img{
+        max-width:420px;
+    }
+
+    .banner h2{
+        font-size:42px;
+    }
+
+    .title h2{
+        font-size:42px;
+    }
+
+    .contact-box{
+        padding:40px 25px;
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:576px){
+
+    section{
+        padding:70px 0;
+    }
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding-top:130px;
+    }
+
+    .hero-text h1{
+        font-size:42px;
+    }
+
+    .hero-text p{
+        font-size:16px;
+    }
+
+    .hero-btn{
+        padding:13px 30px;
+    }
+
+    .coffee-img{
+        max-width:320px;
+    }
+
+    .circle{
+        width:300px;
+        height:300px;
+    }
+
+    .title{
+        margin-bottom:45px;
+    }
+
+    .title h2{
+        font-size:34px;
+    }
+
+    .banner{
+        padding:70px 20px;
+        border-radius:25px;
+    }
+
+    .banner h2{
+        font-size:30px;
+    }
+
+    .special-card img{
+        height:230px;
+    }
+
+    .contact-box{
+        padding:30px 18px;
+    }
+
+    .menu-item h5{
+        font-size:18px;
+    }
+
+}
